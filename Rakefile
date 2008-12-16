@@ -23,6 +23,34 @@ merb_more_gem_paths = %w[
 ]
 
 merb_gem_paths = %w[merb merb-core] + merb_more_gem_paths
+merb_release = {
+  "merb-auth" => 
+    [
+      "merb-auth",
+      "merb-auth-core",
+      "merb-auth-more",
+      "merb-auth-slice-password"
+    ],
+  "merb" =>
+    [
+      "merb-action-args",
+      "merb-assets",
+      "merb-slices",
+      "merb-cache",
+      "merb-core",
+      "merb-exceptions",
+      "merb-gen",
+      "merb-haml",
+      "merb-helpers",
+      "merb-mailer",
+      "merb-param-protection",
+      "merb_datamapper",
+      "merb",
+      "merb-more"
+    ]
+}
+
+merb_gem_paths = %w[merb merb-core merb_datamapper] + merb_more_gem_paths
 
 merb_gems = merb_gem_paths.map { |p| File.basename(p) }
 merb_more_gems = merb_more_gem_paths.map { |p| File.basename(p) }
